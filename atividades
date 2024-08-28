@@ -1,0 +1,152 @@
+ATIVIDADE 1
+
+Resposta 1:
+
+let quadrado=function(num) {
+    return num * num;
+};
+console.log(quadrado(4));
+
+
+Resposta 2:
+
+let saudacao = function(nome) {
+  return `Olá, ${nome}!`;
+};
+
+let mensagem = saudacao('Antônio');
+console.log(mensagem);
+
+
+Resposta 3:
+
+let soma = function(a, b) {
+ return a + b; 
+}; 
+
+let resultado = soma(10, 5); 
+console.log(resultado);
+
+
+Resposta 4:
+
+let verificarPar = function(num) {
+ return num % 2 === 0; 
+}; 
+let resultado = verificarPar(6);
+console.log(resultado);
+
+
+Resposta 5:
+
+let calculaFatorial = function(n) {
+ if (n === 0) return 1; 
+  return n * calculaFatorial(n - 1); 
+}; 
+let resultado = calculaFatorial(5);
+console.log(resultado);
+
+
+Resposta 6:
+
+let dobroDeCadaElemento = function(array) {
+  return array.map(num => num * 2);
+};
+
+let resultado = dobroDeCadaElemento([1, 2, 3]);
+console.log(resultado);
+
+
+Resposta 7:
+
+let juntarStrings = function(str1, str2) {
+  return str1 + str2;
+};
+
+let resultado = juntarStrings('Olá', ' Mundo!');
+console.log(resultado);
+
+
+
+ATIVIDADE 2
+
+Resposta 1:
+
+const quadrado = (num) => num * num;
+console.log(quadrado(4));
+
+
+Resposta 2:
+
+const soma = (a, b) => a + b;
+console.log(soma(5, 3));
+
+
+Resposta 3:
+
+ const saudacao = () => "Olá, mundo!";
+console.log(saudacao());
+
+
+Resposta 4:
+
+const multiplicarPorDois = (num) => {
+    let resultado = num * 2;
+    return resultado;
+};
+console.log(multiplicarPorDois(7));
+
+
+
+ATIVIDADE 3
+
+Resposta 1:
+
+
+function Livro(titulo, autor, anoPublicacao) {
+    this.titulo = titulo;
+    this.autor = autor;
+    this.anoPublicacao = anoPublicacao;
+    
+    this.exibirInfo = function() {
+        return `${this.titulo} de ${this.autor}, publicado em ${this.anoPublicacao}.`;
+    };
+}
+
+let meuLivro = new Livro("1984", "George Orwell", 1949);
+console.log(meuLivro.exibirInfo());
+
+
+Resposta 2:
+
+function Produto(nome, preco, desconto) {
+    this.nome = nome;
+    this.preco = preco;
+    this.desconto = desconto;
+
+    this.precoFinal = function() {
+        return this.preco - (this.preco * this.desconto / 100);
+    };
+}
+
+let meuProduto = new Produto("Smartphone", 1200, 15);
+console.log(meuProduto.precoFinal());
+
+
+Resposta 3:
+
+function Estudante(nome, notas) {
+    this.nome = nome;
+    this.notas = notas;
+
+    this.calcularMedia = function() {
+        let soma = this.notas.reduce((acc, nota) => acc + nota, 0);
+        return soma / this.notas.length;
+    };
+}
+
+let meuEstudante = new Estudante("Ana", [7.5, 8.0, 9.0]);
+console.log(meuEstudante.calcularMedia());
+
+
+
